@@ -7,6 +7,32 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //System.out.println(new App().getGreeting());
+        System.out.println("------Task 1------------");
+        Mobile myMobile = new Mobile("myMobile", "Red", "Mobile");
+        myMobile.makeCall("I am making a call");
+        System.out.println("-------------------------");
+        iPhone myIphone = new iPhone("myIphone", "Green", "iPhone");
+        myIphone.makeCall("I am making a call");
+        System.out.println("-------------------------");
+        Andriod myAndriod = new Andriod("myAndriod", "Blue", "Andriod");
+        myAndriod.makeCall("I am making a call");
+        System.out.println("------Task 2------------");
+        myMobile.getInfo();
+        myIphone.getInfo();
+        myAndriod.getInfo();
+        System.out.println("------Task 3------------");
+        Person personUsingIphone = new Person("iPhone Person", myIphone);
+        Person personUsingAndriod = new Person("Andriod Person", myAndriod);
+        personUsingIphone.mobile.makeCall("I am making a call!");
+        personUsingIphone.mobile.makeCall("I am making a call!!!!");
+        IPhoneRebot iPhoneRebot = new IPhoneRebot(myIphone);
+        personUsingAndriod.changeMobile(myIphone);
+        personUsingAndriod.mobile.makeCall("I can use Iphone");
+
+
+
+
+
     }
 }
